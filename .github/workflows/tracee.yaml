@@ -1,0 +1,30 @@
+name: Tracee Pipeline Scan
+on: [pull_request]
+
+jobs:
+  Tracee-Scan:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Start Tracee profiling in background
+      uses: simar7/tracee-action-start@main
+      with:
+        workdir: "/tmp/tracee"
+
+    - name: Simulate work
+      run: for i in {1..20}; do sleep 2 && strace ls; done
+
+    - name: Stop Tracee profiling
+      uses: simar7/tracee-action-stop@main
+
+    - name: Show Tracee profile
+      run: cat /tmp/tracee/out/tracee.profile
+
+    - name: Compare and create a PR
+      uses: simar7/tracee-action-create-pr@main
+      with:
+        workdir: "/tmp/tracee"
+        github-auth-token: ${{ secrets.GITHUB_TOKEN }}
