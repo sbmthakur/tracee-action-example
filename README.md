@@ -21,5 +21,5 @@ jobs:
       run: for i in {1..20}; do sleep 2 && strace ls; done
 
     - name: Stop and Check Tracee results and create a PR
-      uses: simar7/tracee-action@v0.1.0-stop
+      uses: simar7/tracee-action@v0.2.0-stop
 ```
