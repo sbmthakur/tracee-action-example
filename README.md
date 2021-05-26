@@ -15,11 +15,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Start Tracee profiling in background
-      uses: simar7/tracee-action@v0.1.0-start
+      uses: simar7/tracee-action@v0.2.0-start
 
     - name: Your CI Pipeline Step
       run: for i in {1..20}; do sleep 2 && strace ls; done
 
     - name: Stop and Check Tracee results and create a PR
-      uses: simar7/tracee-action@v0.2.0-stop
+      uses: simar7/tracee-action@v0.3.0-stop
 ```
