@@ -1,5 +1,7 @@
 # tracee-action-example
 
+foo bar baz
+
 An example repo to show how tracee can be configured as a GitHub Action.
 
 tl;dr – Simplest example
