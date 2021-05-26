@@ -16,3 +16,6 @@ jobs:
 
     - name: Stop and Check Tracee results and create a PR
       uses: simar7/tracee-action@b86df9648140ffd537320b1aa5a38e710e58fc30
+      with:
+        fail-on-diff: "true"
+        create-pr: "true"
