@@ -8,11 +8,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Start Tracee profiling in background
-      uses: simar7/tracee-action@v0.2.0-start
+    - name: Run go binary
+      uses: simar7/tracee-action@da8eaf9987274309cf816af172b87f6794a29d9d
 
-    - name: Your CI Pipeline Step
-      run: for i in {1..20}; do sleep 2 && strace ls; done
-
-    - name: Stop and Check Tracee results and create a PR
-      uses: simar7/tracee-action@v0.3.0-stop
+#    - name: Start Tracee profiling in background
+#      uses: simar7/tracee-action@v0.2.0-start
+#    - name: Your CI Pipeline Step
+#      run: for i in {1..20}; do sleep 2 && strace ls; done
+#    - name: Stop and Check Tracee results and create a PR
+#      uses: simar7/tracee-action@v0.3.0-stop
