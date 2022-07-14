@@ -1,5 +1,10 @@
-name: Tracee Pipeline Scan
-on: push
+on:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - created
 
 jobs:
   Tracee-Scan:
