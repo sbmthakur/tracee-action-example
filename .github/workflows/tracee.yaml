@@ -17,7 +17,8 @@ jobs:
       uses: sbmthakur/tracee-action@start
 
     - name: Your CI Pipeline Step
-      run: pip install dateutils
+      run: |
+        echo $(whoami)
 
     - name: Check Tracee results and create a PR
       uses: sbmthakur/tracee-action@stop
