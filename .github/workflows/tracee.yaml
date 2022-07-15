@@ -18,7 +18,7 @@ jobs:
 
     - name: Your CI Pipeline Step
       run: |
-        echo $(whoami)
+        sudo ls
 
     - name: Check Tracee results and create a PR
       uses: sbmthakur/tracee-action@stop
