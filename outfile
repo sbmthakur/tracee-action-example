@@ -1,0 +1,3 @@
+TIME(s)        UID    COMM             PID     TID     RET              EVENT                ARGS
+End of events stream
+Stats: {eventCounter:0 errorCounter:0 lostEvCounter:0 lostWrCounter:0}
